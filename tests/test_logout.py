@@ -1,15 +1,12 @@
+from selene import have
 from selene.support.shared import browser
-import allure
 import os
 
-from pages.dashboard_page import DashboardPage
+from pages.main_page import page
 
 
 def test_logout():
-    page = DashboardPage()
-    with allure.step("Открываем страницу дашборда и логинимся для проверки логаута"):
-        page.open_page()
-        page.login(os.getenv("LOGIN_VALID"), os.getenv("PASSWORD_VALID"))
-    with allure.step("Проверки логаута"):
-        page.logout()
-        browser.element(".ant-col-xs-0 .cy-login-button").click()
+    page.open_page()
+    page.login(os.getenv("LOGIN_VALID"), os.getenv("PASSWORD_VALID"))
+    page.logout()
+    browser.element("#pt-createaccount-2").should(have.text("Create account"))

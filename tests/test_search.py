@@ -1,25 +1,15 @@
-from selene.support.shared import browser
 from selene import by
-import allure
-
-from pages.dashboard_page import DashboardPage
-from pages.books_page import BooksPage
+from selene.support.shared import browser
+from pages.main_page import page
 
 
-def test_search_by_author():
-    dashboard_page = DashboardPage()
-    books_page = BooksPage()
-
-    with allure.step("Вводим в поле поиска имя автора"):
-        dashboard_page.open_page()
-        dashboard_page.search_book("Ленин")
-        books_page.open_book_page("Государство и революция")
+def test_search_existing_article():
+    page.open_page()
+    page.search("ramesses")
+    browser.element(by.text("Ramesses II")).click()
 
 
-def test_search_by_name():
-    dashboard_page = DashboardPage()
-
-    with allure.step("Вводим в поле поиска название книги"):
-        dashboard_page.open_page()
-        dashboard_page.search_book("Государство и революция")
-        browser.element(by.text("Владимир Ленин")).click()
+def test_search_not_existing_article():
+    page.open_page()
+    page.search("rameghgh")
+    browser.element(".mw-search-createlink").click()
