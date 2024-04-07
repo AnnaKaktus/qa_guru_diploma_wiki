@@ -1,2 +1,6 @@
 venv
 .env
+.pytest_cache
+.idea
+allure-results
+tests/api/allure-results

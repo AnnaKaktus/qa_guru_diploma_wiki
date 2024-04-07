@@ -1,6 +1,6 @@
-from selene.support.shared import browser
+from selene import browser, have
 import allure
-from pages.main_page import page
+from pages.ui.main_page import page
 import os
 
 
@@ -16,6 +16,10 @@ class PreferencesPage:
             browser.element("#ooui-php-34").clear()
             browser.element("#ooui-php-34").type(signature)
             browser.element("#prefcontrol button").click()
+
+    def test_signature(self, signature):
+        with allure.step("Проверка подписи"):
+            browser.element("#mw-htmlform-signature").should(have.text(signature))
 
 
 preferences_page = PreferencesPage()
