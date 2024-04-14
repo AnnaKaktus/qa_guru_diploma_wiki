@@ -3,4 +3,4 @@ venv
 .pytest_cache
 .idea
 allure-results
-tests/api/allure-results
+tests/UI/allure-results
