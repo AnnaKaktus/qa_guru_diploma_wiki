@@ -1,5 +1,5 @@
 from jsonschema import validate
-from schemas.schemas_wiki import get_search, get_page
+from schemas.schemas_wiki import get_page
 import allure
 from utils.api import request_get
 

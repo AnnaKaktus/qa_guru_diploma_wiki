@@ -69,3 +69,18 @@ get_page = {
         "title"
     ]
 }
+
+get_history_count = {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "Wiki History Changes Count",
+    "properties": {
+        "count": {
+            "type": "number"
+        },
+        "limit": {
+            "type": "boolean"
+        }
+    },
+    "required": ["count"]
+}

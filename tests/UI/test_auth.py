@@ -1,6 +1,5 @@
 import os
 import allure
-
 from pages.ui.main_page import page
 
 
