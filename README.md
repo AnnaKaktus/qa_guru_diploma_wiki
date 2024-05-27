@@ -70,9 +70,12 @@ Python Pytest PyCharm Selenoid Selene Jenkins Allure Report Telegram
 allure serve allure-results
 ``` 
 
-### Пример видеозаписи прохождения теста
+### Пример видеозаписи прохождения UI-теста
 
 ![This is an image](/design/screens/test_video.gif)
+
+### Пример видеозаписи прохождения UI-теста
+![This is an image](/design/screens/mobile_video.gif)
 
 ### Настроено автоматическое оповещение о результатах сборки Jenkins в Telegram-бот
 
