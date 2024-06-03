@@ -74,7 +74,7 @@ allure serve allure-results
 
 ![This is an image](/design/screens/test_video.gif)
 
-### Пример видеозаписи прохождения UI-теста
+### Пример видеозаписи прохождения mobile-теста
 ![This is an image](/design/screens/mobile_video.gif)
 
 ### Настроено автоматическое оповещение о результатах сборки Jenkins в Telegram-бот

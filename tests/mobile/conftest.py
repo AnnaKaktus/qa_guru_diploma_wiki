@@ -11,7 +11,7 @@ def pytest_addoption(parser):
     parser.addoption(
         "--context",
         required=False,
-        default="local_emulator",
+        default="bstack",
         choices=["bstack", "local_real", "local_emulator"],
     )
 

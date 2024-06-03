@@ -1,9 +1,21 @@
 from allure import step
 from appium.webdriver.common.appiumby import AppiumBy
 from selene import browser, have
+from selenium.webdriver.common.action_chains import ActionChains, ActionBuilder
+from selenium.webdriver.common.actions.pointer_actions import PointerInput
+from selenium.webdriver.common.actions.interaction import POINTER_TOUCH
 
 
 class WikiAppPage:
+
+    def swipe_down(self):
+        actions = ActionChains(browser.driver)
+        actions.w3c_actions = ActionBuilder(browser.driver, mouse=PointerInput(POINTER_TOUCH, "touch"))
+        actions.w3c_actions.pointer_action.move_to_location(538, 1559)
+        actions.w3c_actions.pointer_action.pointer_down()
+        actions.w3c_actions.pointer_action.move_to_location(538, 100)
+        actions.w3c_actions.pointer_action.release()
+        actions.perform()
 
     def skip_onboarding(self):
         with step("Пропустить необязательный шаг"):
@@ -28,6 +40,8 @@ class WikiAppPage:
     def logout(self):
         with step("Логаут"):
             browser.element((AppiumBy.XPATH, "//android.widget.TextView[@text=\"Settings\"]")).click()
+            self.swipe_down()
+            self.swipe_down()
             browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/logoutButton")).click()
             browser.element((AppiumBy.ID, "android:id/button1")).click()
 
