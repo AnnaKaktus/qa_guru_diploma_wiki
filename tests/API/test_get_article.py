@@ -9,7 +9,7 @@ from utils.api import request_get
 @allure.epic("wiki REST API")
 @allure.feature("Get the article API request")
 @allure.label("api")
-@pytest.mark.api
+@pytest.mark.API
 def test_api_get_article():
     with allure.step("Send 'Get article' API request"):
         result = request_get("page/Ramesses_II/bare")
@@ -22,7 +22,7 @@ def test_api_get_article():
 @allure.epic("wiki REST API")
 @allure.feature("Get the article API request")
 @allure.label("api")
-@pytest.mark.api
+@pytest.mark.API
 def test_api_get_not_existed_article():
     with allure.step("Tests 'Get article' API request for the article that not exist"):
         result = request_get("page/Ramesses_IXXX/bare")
