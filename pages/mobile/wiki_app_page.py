@@ -4,6 +4,7 @@ from selene import browser, have
 from selenium.webdriver.common.action_chains import ActionChains, ActionBuilder
 from selenium.webdriver.common.actions.pointer_actions import PointerInput
 from selenium.webdriver.common.actions.interaction import POINTER_TOUCH
+from time import sleep
 
 
 class WikiAppPage:
@@ -16,6 +17,7 @@ class WikiAppPage:
         actions.w3c_actions.pointer_action.move_to_location(538, 100)
         actions.w3c_actions.pointer_action.release()
         actions.perform()
+        sleep(1)
 
     def skip_onboarding(self):
         with step("Skip not obligatory step"):
