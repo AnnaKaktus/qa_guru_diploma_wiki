@@ -9,7 +9,7 @@ class TestPreferences:
     @allure.epic("wiki preferences")
     @allure.feature("Change the signature")
     @allure.label("web")
-    @pytest.mark.UI
+    @pytest.mark.ui
     def test_change_signature(self):
         preferences_page.open()
         preferences_page.change_signature("Anna Kaktusova")

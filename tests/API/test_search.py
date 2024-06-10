@@ -9,7 +9,7 @@ import pytest
 @allure.epic("wiki REST API")
 @allure.feature("Search API request")
 @allure.label("api")
-@pytest.mark.API
+@pytest.mark.api
 def test_api_search():
     with allure.step("Send api request"):
         result = request_get("search/page?q=Ramesses&limit=1")

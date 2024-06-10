@@ -9,7 +9,7 @@ class TestSearch:
     @allure.epic("wiki main")
     @allure.feature("Search article")
     @allure.label("web")
-    @pytest.mark.UI
+    @pytest.mark.ui
     def test_search_existing_article(self):
         page.open_page()
         page.search("ramesses")
@@ -20,7 +20,7 @@ class TestSearch:
     @allure.epic("wiki main")
     @allure.feature("Search article")
     @allure.label("web")
-    @pytest.mark.UI
+    @pytest.mark.ui
     def test_search_not_existing_article(self):
         page.open_page()
         page.search("rameghgh")

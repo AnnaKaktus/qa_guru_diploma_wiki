@@ -8,7 +8,7 @@ class TestLogout:
     @allure.epic("wiki main")
     @allure.feature("Logout")
     @allure.label("web")
-    @pytest.mark.UI
+    @pytest.mark.ui
     def test_logout(self):
         page.open_page()
         page.login(os.getenv("LOGIN_VALID"), os.getenv("PASSWORD_VALID"))

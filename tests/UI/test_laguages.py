@@ -8,7 +8,7 @@ class TestLanguages:
     @allure.epic("wiki main")
     @allure.feature("Check change the langauge to Russian")
     @allure.label("web")
-    @pytest.mark.UI
+    @pytest.mark.ui
     def test_language_change(self):
         page.open_page("Ramesses_II")
         page.change_language()

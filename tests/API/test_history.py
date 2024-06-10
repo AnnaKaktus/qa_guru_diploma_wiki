@@ -9,7 +9,7 @@ from utils.api import request_get
 @allure.epic("wiki REST API")
 @allure.feature("History count API request")
 @allure.label("api")
-@pytest.mark.API
+@pytest.mark.api
 def test_api_history_count():
     with allure.step("Send 'Get history' API request"):
         result = request_get("page/Ramesses_II/history/counts/anonymous")

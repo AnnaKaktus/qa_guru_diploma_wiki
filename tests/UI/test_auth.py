@@ -10,7 +10,7 @@ class TestAuth:
     @allure.epic("wiki main")
     @allure.feature("Web login")
     @allure.label("web")
-    @pytest.mark.UI
+    @pytest.mark.ui
     def test_auth_with_valid_creds(self):
         page.open_page()
         page.login(os.getenv("LOGIN_VALID"), os.getenv("PASSWORD_VALID"))
@@ -20,7 +20,7 @@ class TestAuth:
     @allure.epic("wiki main")
     @allure.feature("Web login")
     @allure.label("web")
-    @pytest.mark.UI
+    @pytest.mark.ui
     def test_auth_with_invalid_creds(self):
         page.open_page()
         page.login(os.getenv("LOGIN_VALID"), os.getenv("PASSWORD_INVALID"))

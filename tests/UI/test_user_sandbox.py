@@ -9,7 +9,7 @@ class TestUserSandbox:
     @allure.epic("wiki sandbox")
     @allure.feature("Edit in the sandbox")
     @allure.label("web")
-    @pytest.mark.UI
+    @pytest.mark.ui
     @pytest.mark.xfail()
     def test_edit(self):
         text = "A NEW PREVIEW FOR THE MY PAGE"
