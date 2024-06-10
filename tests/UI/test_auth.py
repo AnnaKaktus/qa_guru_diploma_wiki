@@ -1,14 +1,16 @@
 import os
 import allure
 from pages.ui.main_page import page
+import pytest
 
 
 class TestAuth:
 
     @allure.label("owner", "Anna")
     @allure.epic("wiki main")
-    @allure.feature("Check login with valid credentials")
+    @allure.feature("Web login")
     @allure.label("web")
+    @pytest.mark.UI
     def test_auth_with_valid_creds(self):
         page.open_page()
         page.login(os.getenv("LOGIN_VALID"), os.getenv("PASSWORD_VALID"))
@@ -16,8 +18,9 @@ class TestAuth:
 
     @allure.label("owner", "Anna")
     @allure.epic("wiki main")
-    @allure.feature("Check login with invalid credentials")
+    @allure.feature("Web login")
     @allure.label("web")
+    @pytest.mark.UI
     def test_auth_with_invalid_creds(self):
         page.open_page()
         page.login(os.getenv("LOGIN_VALID"), os.getenv("PASSWORD_INVALID"))

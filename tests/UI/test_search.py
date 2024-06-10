@@ -1,13 +1,15 @@
 from pages.ui.main_page import page
 import allure
+import pytest
 
 
 class TestSearch:
 
     @allure.label("owner", "Anna")
     @allure.epic("wiki main")
-    @allure.feature("Search the existing article")
+    @allure.feature("Search article")
     @allure.label("web")
+    @pytest.mark.UI
     def test_search_existing_article(self):
         page.open_page()
         page.search("ramesses")
@@ -16,8 +18,9 @@ class TestSearch:
 
     @allure.label("owner", "Anna")
     @allure.epic("wiki main")
-    @allure.feature("Search the unknown article")
+    @allure.feature("Search article")
     @allure.label("web")
+    @pytest.mark.UI
     def test_search_not_existing_article(self):
         page.open_page()
         page.search("rameghgh")

@@ -1,5 +1,6 @@
 from pages.mobile.wiki_app_page import wiki_app_page
 import allure
+import pytest
 
 
 class TestChangeLanguage:
@@ -7,6 +8,7 @@ class TestChangeLanguage:
     @allure.epic("wiki mobile")
     @allure.feature("Test language check")
     @allure.label("mobile")
+    @pytest.mark.api
     def test_change_language(self):
         wiki_app_page.search_and_open("Ramesses II")
         wiki_app_page.open_languages_list()

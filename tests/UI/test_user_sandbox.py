@@ -2,12 +2,14 @@ from pages.ui.user_sandbox_page import sandbox_page
 import pytest
 import allure
 
+
 class TestUserSandbox:
 
     @allure.label("owner", "Anna")
     @allure.epic("wiki sandbox")
     @allure.feature("Edit in the sandbox")
     @allure.label("web")
+    @pytest.mark.UI
     @pytest.mark.xfail()
     def test_edit(self):
         text = "A NEW PREVIEW FOR THE MY PAGE"

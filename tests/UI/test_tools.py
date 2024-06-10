@@ -9,6 +9,7 @@ class TestTools:
     @allure.epic("wiki tools")
     @allure.feature("Url shortener")
     @allure.label("web")
+    @pytest.mark.UI
     @pytest.mark.xfail()
     def test_short_url(self):
         page.open_page("Ramesses_II")

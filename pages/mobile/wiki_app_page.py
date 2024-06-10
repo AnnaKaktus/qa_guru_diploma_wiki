@@ -18,16 +18,16 @@ class WikiAppPage:
         actions.perform()
 
     def skip_onboarding(self):
-        with step("Пропустить необязательный шаг"):
+        with step("Skip not obligatory step"):
             browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/fragment_onboarding_skip_button")).click()
 
     def check_login(self, login):
-        with step("Проверка логина"):
+        with step("Check if user logged in"):
             browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/menu_icon")).click()
             browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/main_drawer_account_name")).should(have.text(login))
 
     def login(self, login, password):
-        with step("Авторизация"):
+        with step("Sign in"):
             self.skip_onboarding()
             browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/menu_icon")).click()
             browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/main_drawer_login_button")).click()
@@ -38,7 +38,7 @@ class WikiAppPage:
             browser.element((AppiumBy.ID, "android:id/button2")).click()
 
     def logout(self):
-        with step("Логаут"):
+        with step("Sign out"):
             browser.element((AppiumBy.XPATH, "//android.widget.TextView[@text=\"Settings\"]")).click()
             self.swipe_down()
             self.swipe_down()
@@ -46,7 +46,7 @@ class WikiAppPage:
             browser.element((AppiumBy.ID, "android:id/button1")).click()
 
     def search(self, search_text=""):
-        with step("Поиск статьи"):
+        with step("Search the article"):
             self.skip_onboarding()
             browser.all((AppiumBy.CLASS_NAME, "android.widget.TextView")).element_by(
                 have.text("Search Wikipedia")).click()
