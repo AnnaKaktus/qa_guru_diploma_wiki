@@ -1,4 +1,4 @@
-from pages.ui.preferences_page import preferences_page
+from wikipedia_project_tests.pages.ui.preferences_page import preferences_page
 import allure
 import pytest
 

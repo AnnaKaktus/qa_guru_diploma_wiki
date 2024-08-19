@@ -4,7 +4,7 @@ import pytest
 from appium import webdriver
 from dotenv import load_dotenv, find_dotenv
 from selene import browser, support
-from utils import attach
+from wikipedia_project_tests.utils import attach
 
 
 def pytest_addoption(parser):
@@ -19,7 +19,7 @@ def pytest_addoption(parser):
 def pytest_configure(config):
     context = config.getoption("--context")
     load_dotenv(find_dotenv(filename=f".env.{context}"))
-    load_dotenv(find_dotenv(filename=".env.mobile"))
+    load_dotenv(find_dotenv(filename=".env"))
 
 
 @pytest.fixture

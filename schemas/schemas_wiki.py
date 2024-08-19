@@ -84,3 +84,17 @@ get_history_count = {
     },
     "required": ["count"]
 }
+
+error_json = {
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "title": "Wiki Error Object",
+    "properties": {
+        "httpCode": {
+            "type": "number"
+        },
+        "httpReason": {
+            "type": "string"
+        }
+    }
+}

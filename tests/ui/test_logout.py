@@ -1,7 +1,7 @@
 import os
 import allure
 import pytest
-from pages.ui.main_page import page
+from wikipedia_project_tests.pages.ui.main_page import page
 
 class TestLogout:
     @allure.label("owner", "Anna")

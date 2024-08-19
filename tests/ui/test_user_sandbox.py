@@ -1,4 +1,4 @@
-from pages.ui.user_sandbox_page import sandbox_page
+from wikipedia_project_tests.pages.ui.user_sandbox_page import sandbox_page
 import pytest
 import allure
 

@@ -1,5 +1,7 @@
 import requests
 import allure
+import json
+from requests import Response
 from allure_commons.types import AttachmentType
 
 
@@ -46,3 +48,33 @@ def attach_bstack_video(session_id, login, password):
         name="video recording",
         attachment_type=allure.attachment_type.HTML,
     )
+
+
+def response_attaching(response: Response, response_type="json"):
+    allure.attach(
+        body=response.request.url,
+        name="Request url",
+        attachment_type=AttachmentType.TEXT,
+    )
+
+    if response.request.body:
+
+        allure.attach(
+            body=json.dumps(response.request.body, indent=4, ensure_ascii=True),
+            name="Request body",
+            attachment_type=AttachmentType.JSON,
+            extension="json",
+        )
+
+        attachment_type = AttachmentType.JSON
+        body = json.dumps(response.request.body, indent=4, ensure_ascii=True)
+        if response_type == "text":
+            AttachmentType.TEXT
+            body = response.request.body
+
+        allure.attach(
+            body=body,
+            name="Response",
+            attachment_type=attachment_type,
+            extension=response_type,
+        )

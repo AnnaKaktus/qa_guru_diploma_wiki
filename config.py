@@ -1,7 +1,7 @@
 import os
 from appium.options.android import UiAutomator2Options
 from pydantic import BaseModel
-from utils import file
+from wikipedia_project_tests.utils import file
 
 
 class Config(BaseModel):

@@ -1,5 +1,5 @@
 def abs_path_from_project(relative_path: str):
-    import utils
+    from wikipedia_project_tests import utils
     from pathlib import Path
 
     return (

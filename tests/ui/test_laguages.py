@@ -1,4 +1,4 @@
-from pages.ui.main_page import page
+from wikipedia_project_tests.pages.ui.main_page import page
 import allure
 import pytest
 

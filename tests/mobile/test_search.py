@@ -1,6 +1,6 @@
 import allure
 import pytest
-from pages.mobile.wiki_app_page import wiki_app_page
+from wikipedia_project_tests.pages.mobile.wiki_app_page import wiki_app_page
 
 
 class TestSearch:

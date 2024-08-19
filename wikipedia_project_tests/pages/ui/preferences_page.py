@@ -1,6 +1,6 @@
 from selene import browser, have
 import allure
-from pages.ui.main_page import page
+from wikipedia_project_tests.pages.ui.main_page import page
 import os
 
 

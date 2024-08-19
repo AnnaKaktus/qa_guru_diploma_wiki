@@ -44,7 +44,7 @@ class WikiAppPage:
             browser.element((AppiumBy.XPATH, "//android.widget.TextView[@text=\"Settings\"]")).click()
             self.swipe_down()
             self.swipe_down()
-            browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/logoutButton")).click()
+            browser.element((AppiumBy.ID, "org.wikipedia.alpha:id/logoutButton")).should(have.text("Log out")).click()
             browser.element((AppiumBy.ID, "android:id/button1")).click()
 
     def search(self, search_text=""):
