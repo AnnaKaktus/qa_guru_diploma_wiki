@@ -80,3 +80,7 @@ allure serve allure-results
 ### Настроено автоматическое оповещение о результатах сборки Jenkins в Telegram-бот
 
 ![This is an image](/design/screens/tg_screen.png)
+
+### Настроена интеграция с Jira
+
+![This is an image](/design/screens/jira_screen.png)
