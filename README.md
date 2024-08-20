@@ -42,6 +42,12 @@ Python Pytest PyCharm Selenoid Selene Jenkins Allure Report Telegram
 
 ![This is an image](/design/screens/allure_screen.png)
 
+![This is an image](/design/screens/allure_screen_1.png)
+
+![This is an image](/design/screens/allure_screen_2.png)
+
+![This is an image](/design/screens/allure_screen_3.png)
+
 ### Локальный запуск автотестов
 
 1. Стянуть репозиторий на свой локальный компьютер при помощи git clone
