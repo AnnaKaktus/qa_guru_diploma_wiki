@@ -8,7 +8,6 @@ def api_request(base_url, endpoint, method, data=None, params=None, response_typ
     url = f"{base_url}{endpoint}"
     response = requests.request(method, url, data=data, params=params)
     api_log.response_logging(response)
-    print(response_type)
     attach.response_attaching(response, response_type=response_type)
     return response
 
