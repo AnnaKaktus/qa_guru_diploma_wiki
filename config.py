@@ -19,15 +19,7 @@ class Config(BaseModel):
 
         options = UiAutomator2Options()
 
-        print(self.context, self.device_name, self.app)
-
-        if context == "local_real":
-            options.set_capability("platformName", self.platformName)
-            options.set_capability("remote_url", self.remote_url)
-            options.set_capability("app", file.abs_path_from_project(self.app))
-            options.set_capability("appWaitActivity", self.appWaitActivity)
-
-        if context == "local_emulator":
+        if context == "local_real" or "local_emulator":
             options.set_capability("platformName", self.platformName)
             options.set_capability("remote_url", self.remote_url)
             options.set_capability("app", file.abs_path_from_project(self.app))
